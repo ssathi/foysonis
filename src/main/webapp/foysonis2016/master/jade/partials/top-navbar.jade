@@ -1,0 +1,108 @@
+// START Top Navbar
+nav.navbar.navbar-default.navbar-top.navbar-fixed-top(role='navigation')
+    // START navbar header
+    .navbar-header
+      a.navbar-brand(href='index.html') 
+        .brand-logo 
+          i.icon.icon-logo 
+          //img.img-responsive(src="app/img/logo.png", alt="App Logo")
+        .brand-logo-collapsed 
+          i.icon.icon-icon 
+    // END navbar header
+
+    // START Nav wrapper
+    .nav-wrapper
+      // START Left navbar
+      ul.nav.navbar-nav
+        li.back-item
+          // Button used to collapse the left sidebar. Only visible on tablet and desktops
+          a(href='#', data-toggle-state="aside-collapsed").hidden-xs
+            em.icon.icon-right 
+          // Button to show/hide the sidebar on mobile. Visible on mobile only.
+          a(href='#', data-toggle-state="aside-toggled").visible-xs
+            em.icon.icon-right
+
+        // START Page Title
+        li.page-title.hidden-xs
+          i.icon.icon-admin
+          h1 Location & Areas
+        // END Page Title
+
+        // START User avatar toggle
+        //li
+          // Button used to collapse the left sidebar. Only visible on tablet and desktops
+          //a(href='#', data-toggle-state="aside-user")
+           // em.fa.fa-user
+        // END User avatar toggle
+      // END Left navbar
+
+      // START Right Navbar
+      ul.nav.navbar-nav.navbar-right
+        // Search icon
+        //li
+          //a(href='#', data-toggle="navbar-search")
+            //em.fa.fa-search
+        // Fullscreen
+        li.full-item
+          a(href='#', data-toggle="fullscreen")
+            em.icon.icon-full.hidden-xs       
+        block offsidebar-toggle
+          // START Contacts button
+          li(data-toggle-class="active")
+            a(href='#', data-toggle-state="offsidebar-open")
+              em.icon.icon-notification
+          // END Contacts menu
+          // START Alert menu
+          li.dropdown.dropdown-list
+            a.dropdown-toggle(href='#', data-toggle='dropdown', data-play="flipInX")
+              em.icon.icon-user
+              //.label.label-danger 11
+            // START Dropdown menu
+            ul.dropdown-menu
+              li
+                // START list group
+                .list-group 
+                  // list item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        em.fa.fa-twitter.fa-2x.text-info
+                      .media-body.clearfix
+                          p.m0 New followers
+                          p.m0.text-muted: small 1 new follower
+                  // list item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        em.fa.fa-envelope.fa-2x.text-warning
+                      .media-body.clearfix
+                          p.m0 New e-mails
+                          p.m0.text-muted: small You have 10 new emails
+                  // list item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        em.fa.fa-tasks.fa-2x.text-success
+                      .media-body.clearfix
+                          p.m0 Pending Tasks
+                          p.m0.text-muted: small 11 pending task
+
+                  // last list item 
+                  a.list-group-item(href='#')
+                    small More notifications
+                    span.label.label-danger.pull-right 14
+                // END list group
+            // END Dropdown menu
+          // END Alert menu
+      // END Right Navbar
+    // END Nav wrapper
+    
+    // START Search form
+    form.navbar-form(role='search', action="search.html")
+      .form-group.has-feedback
+        input.form-control(type='text', placeholder='Type and hit Enter..')
+        .fa.fa-times.form-control-feedback(data-toggle="navbar-search-dismiss")
+      button.hidden.btn.btn-default(type='submit') Submit
+    // END Search form
+
+// END Top Navbar

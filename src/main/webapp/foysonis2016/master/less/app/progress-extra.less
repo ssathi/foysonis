@@ -1,0 +1,67 @@
+/* ========================================================================
+   Component: progress-extra.less
+ ========================================================================== */
+ 
+// Different size of Progress bars
+
+@progress-height-sm: 15px;
+@progress-height-xs: 10px;
+
+.progress-sm {
+  height: @progress-height-sm;
+}
+
+.progress-xs {
+  height: @progress-height-xs;
+}
+
+// Progress color variants
+
+.progress-bar-purple {
+  .progress-bar-variant(@brand-purple);
+}
+.progress-bar-inverse {
+  .progress-bar-variant(@brand-inverse);
+}
+.progress-bar-green {
+  .progress-bar-variant(@brand-green);
+}
+.progress-bar-pink {
+  .progress-bar-variant(@brand-pink);
+}
+
+.progress-bar-blue {
+  background: @brand-inverse; /* Old browsers */
+  background: -moz-linear-gradient(left,  @brand-inverse 0%, @brand-primary 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  @brand-inverse 0%,@brand-primary 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  @brand-inverse 0%,@brand-primary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@brand-inverse', endColorstr='@brand-primary',GradientType=1 ); /* IE6-9 */
+}
+
+.progress-bar-red {
+  background: #f5515f; /* Old browsers */
+  background: -moz-linear-gradient(left,  #f5515f 0%, #9f041b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #f5515f 0%,#9f041b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #f5515f 0%,#9f041b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5515f', endColorstr='#9f041b',GradientType=1 ); /* IE6-9 */
+}
+
+// progress-% classes for simple usage
+
+@num-steps: 10;
+@steps: round(100 / @num-steps);
+
+.progress-steps (@index) when (@index >= 100) {
+  .progress-100 {
+    width: 100%;
+  }
+}
+
+.progress-steps (@index) when (@index < 100) {
+  .progress-@{index} {
+    width: percentage(@index/100);
+  }
+  .progress-steps (@index + @steps);
+}
+
+.progress-steps (0);

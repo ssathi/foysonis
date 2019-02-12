@@ -1,0 +1,218 @@
+body {
+    background-color: #f9f9f9;
+}
+
+.signup-wrapper {
+    top: 36px;
+    max-width: 430px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.signup-wrapper .alert {
+    margin-top: 10px;
+}
+
+.signup-wrapper input[text] {
+    padding: 0 .4em 0 .4em;
+    margin-bottom: 2em;
+    vertical-align: middle;
+    border-radius: 3px;
+    min-width: 50px;
+    max-width: 550px;
+    width: 100%;
+    min-height: 36px;
+    background-color: #fff;
+    border: 3px solid #c9c9c9 !important;
+}
+
+.signup-wrapper label {
+    color: #595959;
+    font-weight: 500;
+    display: block;
+    max-width: 550px;
+    padding-bottom: .4em;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.prompt {
+    margin-top: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    color: #959595;
+}
+
+.logo {
+    position: relative;
+    height: 46px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+.float-left {
+    float: left;
+}
+
+.password-requirements {
+    margin-top: 10px;
+}
+
+.password-requirements .selfclear {
+    margin-left: 20px;
+}
+
+.password-requirements ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.password-requirements ul:first-child {
+    margin-right: 15px;
+}
+
+.password-requirements ul li:before {
+    position: relative;
+    top: -1px;
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 6px;
+    margin-right: 10px;
+    border-radius: 8px;
+    background: #52bad5;
+}
+
+.password-requirements ul li.completed {
+    opacity: .5;
+}
+
+.btn-primary {
+    color: #fff !important;
+    padding: 10px 30px !important;
+    background-color: #40A3FD !important;
+    border-color: #0086FC;
+}
+
+.btn-primary:hover {
+    background-color: #4F94D3 !important;
+}
+
+
+div[ng-messages] {
+    margin-top: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    color: #FF0000;
+}
+
+
+.headerTitle{
+    //font-weight: bold;
+    font-family: inherit;
+    font-size: 22px;
+} 
+
+.newFormCreateBtn{
+    background-color: #16c98d !important;
+    height: 37px;
+    line-height: 1;
+    border: 0px;
+}
+
+.findBtn{
+    background-color: #325c8f !important;
+    height: 37px;
+    line-height: 1;
+    border: 0px;
+} 
+
+.strgTagDiv {
+    position: absolute;
+    top: 28px;
+    left: 25px;
+}
+
+.tagArrowDiv {
+  width: 0; 
+  height: 0; 
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-right: 13px solid;
+  margin-top: -2px;
+  float: left;
+}
+
+.attrTags {
+  padding: 8px;
+  padding-left: 2px;  
+  border-radius: 0;
+  box-shadow: 6px 5px 13px -6px rgba(0,0,0,0.75);
+}
+
+.attrTagColour0 {
+  background-color:#f69301;
+  color: #ffffff;
+}
+.attrTagColour1 {
+  background-color:#b6e062;
+  color: #000000;
+}
+.attrTagColour2 {
+  background-color:#26c6c6;
+  color: #ffffff;
+} 
+.attrTagColour3 {
+  background-color:#f2e185;
+  color: #000000;
+}               
+.attrTagColour4 {
+  background-color:#3660b4;
+  color: #ffffff;
+}        
+
+.tagArrowDivCol0 {
+    border-right-color:#f69301;
+}
+.tagArrowDivCol1 {
+    border-right-color:#b6e062;
+}
+.tagArrowDivCol2 {
+    border-right-color:#26c6c6;
+}        
+.tagArrowDivCol3 {
+    border-right-color:#f2e185;
+}
+.tagArrowDivCol4 {
+    border-right-color:#3660b4;
+}
+
+.tagCloseBtn0 {
+    filter: invert(0%);
+}       
+ 
+.tagCloseBtn1 {
+    filter: invert(100%);
+}
+                
+.btnAttrTag {
+  background: transparent;
+  border: 0;
+  margin-left: -13px;
+} 

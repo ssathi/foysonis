@@ -1,0 +1,4 @@
+Item,Description,Category,Is Lot Tracked,Is Expired,Is Case Tracked,Lowest UOM,Origin Code,Each Per Case,Case Per Pallet,UPC Code,EAN Code,Storage Attribute
+ITEMA,This is ITEMA description,Category01,TRUE,TRUE,FALSE,EACH,US,12,24,A1212,aaa,REGULAR
+ITEMB,This is ITEMB description,Category02,TRUE,FALSE,FALSE,EACH,US,12,1,B3434,bbb,REGULAR
+ITEMC,This is ITEMC description,Category03,FALSE,TRUE,TRUE,EACH,US,1,64,C5656,ccc,REGULAR

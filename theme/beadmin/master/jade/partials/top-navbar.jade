@@ -1,0 +1,182 @@
+// START Top Navbar
+nav.navbar.navbar-default.navbar-top.navbar-fixed-top(role='navigation')
+    // START navbar header
+    .navbar-header
+      a.navbar-brand(href='index.html') 
+        .brand-logo 
+          img.img-responsive(src="app/img/logo.png", alt="App Logo")
+        .brand-logo-collapsed 
+          img.img-responsive(src="app/img/logo-single.png", alt="App Logo")
+    // END navbar header
+
+    // START Nav wrapper
+    .nav-wrapper
+      // START Left navbar
+      ul.nav.navbar-nav
+        li
+          // Button used to collapse the left sidebar. Only visible on tablet and desktops
+          a(href='#', data-toggle-state="aside-collapsed").hidden-xs
+            em.fa.fa-navicon
+          // Button to show/hide the sidebar on mobile. Visible on mobile only.
+          a(href='#', data-toggle-state="aside-toggled").visible-xs
+            em.fa.fa-navicon
+        // START Messages menu (dropdown-list)
+        li.dropdown.dropdown-list
+          a.dropdown-toggle(href='#', data-toggle='dropdown', data-play="flipInX")
+            em.fa.fa-envelope
+          // START Dropdown menu
+          ul.dropdown-menu
+            li.dropdown-menu-header
+              | Unread messages
+            li.p-sm
+              input.form-control(type="text", placeholder="Find contacts..", onfocus="javascript:void(0);")
+            li
+              .scroll-viewport
+                // START list group
+                .list-group.scroll-content
+                  // START list group item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        img.media-object.img-circle.thumb32(src="app/img/user/01.jpg", alt="Image")
+                      .media-body.clearfix
+                        small.pull-right 5m
+                        strong.media-heading.text-primary 
+                          span.circle.circle-success.circle-md
+                          | Greg Lewis
+                        p.mb-sm: small Nunc vel dui et leo sagittis fringilla. 
+                  // END list group item
+                  // START list group item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        img.media-object.img-circle.thumb32(src="app/img/user/04.jpg", alt="Image")
+                      .media-body.clearfix
+                        small.pull-right 3h
+                        strong.media-heading.text-primary 
+                          span.circle.circle-success.circle-md
+                          | Constance Cook
+                        p.mb-sm: small Nunc vel dui et leo sagittis fringilla. 
+                  // END list group item
+                  // START list group item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        img.media-object.img-circle.thumb32(src="app/img/user/03.jpg", alt="Image")
+                      .media-body.clearfix
+                        small.pull-right 3h
+                        strong.media-heading.text-primary 
+                          span.circle.circle-danger.circle-md
+                          | Cody Barnes
+                        p.mb-sm: small Nunc vel dui et leo sagittis fringilla. 
+                  // END list group item
+                  // START list group item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        img.media-object.img-circle.thumb32(src="app/img/user/05.jpg", alt="Image")
+                      .media-body.clearfix
+                        small.pull-right 4h
+                        strong.media-heading.text-primary 
+                          span.circle.circle-danger.circle-md
+                          | Gina Robinson
+                        p.mb-sm: small Nunc vel dui et leo sagittis fringilla. 
+                  // END list group item
+                  // START list group item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        img.media-object.img-circle.thumb32(src="app/img/user/06.jpg", alt="Image")
+                      .media-body.clearfix
+                        small.pull-right yesterday
+                        strong.media-heading.text-primary 
+                          span.circle.circle-danger.circle-md
+                          | Violet Olson
+                        p.mb-sm: small Nunc vel dui et leo sagittis fringilla. 
+                  // END list group item
+                // END list group
+            // START dropdown footer
+            li.p: a(href='#').text-center
+                small.text-primary More messages
+            // END dropdown footer
+          // END Dropdown menu
+        // END Messages menu (dropdown-list)
+        // START User avatar toggle
+        li
+          // Button used to collapse the left sidebar. Only visible on tablet and desktops
+          a(href='#', data-toggle-state="aside-user")
+            em.fa.fa-user
+        // END User avatar toggle
+      // END Left navbar
+
+      // START Right Navbar
+      ul.nav.navbar-nav.navbar-right
+        // Search icon
+        li
+          a(href='#', data-toggle="navbar-search")
+            em.fa.fa-search
+        // Fullscreen
+        li
+          a(href='#', data-toggle="fullscreen")
+            em.fa.fa-expand
+        // START Alert menu
+        li.dropdown.dropdown-list
+          a.dropdown-toggle(href='#', data-toggle='dropdown', data-play="flipInX")
+            em.fa.fa-bell
+            .label.label-danger 11
+          // START Dropdown menu
+          ul.dropdown-menu
+            li
+              // START list group
+              .list-group
+                // list item
+                a.list-group-item(href='#')
+                  .media
+                    .pull-left
+                      em.fa.fa-twitter.fa-2x.text-info
+                    .media-body.clearfix
+                        p.m0 New followers
+                        p.m0.text-muted: small 1 new follower
+                // list item
+                a.list-group-item(href='#')
+                  .media
+                    .pull-left
+                      em.fa.fa-envelope.fa-2x.text-warning
+                    .media-body.clearfix
+                        p.m0 New e-mails
+                        p.m0.text-muted: small You have 10 new emails
+                // list item
+                a.list-group-item(href='#')
+                  .media
+                    .pull-left
+                      em.fa.fa-tasks.fa-2x.text-success
+                    .media-body.clearfix
+                        p.m0 Pending Tasks
+                        p.m0.text-muted: small 11 pending task
+
+                // last list item 
+                a.list-group-item(href='#')
+                  small More notifications
+                  span.label.label-danger.pull-right 14
+              // END list group
+          // END Dropdown menu
+        // END Alert menu
+        
+        block offsidebar-toggle
+          // START Contacts button
+          li
+            a(href='#', data-toggle-state="offsidebar-open")
+              em.fa.fa-group
+          // END Contacts menu
+      // END Right Navbar
+    // END Nav wrapper
+    
+    // START Search form
+    form.navbar-form(role='search', action="search.html")
+      .form-group.has-feedback
+        input.form-control(type='text', placeholder='Type and hit Enter..')
+        .fa.fa-times.form-control-feedback(data-toggle="navbar-search-dismiss")
+      button.hidden.btn.btn-default(type='submit') Submit
+    // END Search form
+
+// END Top Navbar

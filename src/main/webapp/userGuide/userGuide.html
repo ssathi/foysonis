@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<head>
+    <!-- Meta-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>Foysonis</title>
+    <!-- <link rel="shortcut icon" type="image/png" href="images/favicon.png"/> -->
+
+    <link rel="stylesheet" href="../userGuide/css/bootstrap.css">
+    <!-- Vendor CSS-->
+    <link rel="stylesheet" href="../userGuide/css/font-awesome.min.css">
+
+
+
+    <!-- Modernizr JS Script-->
+    <!-- FastClick for mobiles-->
+
+
+    <!-- <asset:javascript src="angular.js"/> -->
+
+    <link rel="stylesheet" href="../userGuide/css/userGuideStyle.css">
+    <link rel="stylesheet" href="../userGuide/css/style.css"/>
+
+
+
+
+    <style>
+
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+    }
+
+    .panel button {
+        margin-bottom: 0px;
+    }
+
+    @media only screen and (max-width: 450px) {
+        .userImage {
+            vertical-align: top;
+            //height: 30px;
+        }
+    }
+    .upgradeNotifyText{
+        overflow-wrap:break-word;
+    }
+/*    .nav-wrapper .nav.navbar-nav {
+        margin-top: -10px;
+    }    
+    .content-wrapper {
+        margin-top: -20px;
+    }
+    .navbar-top {
+        background-color: transparent;
+    }    
+
+    .aside-collapsed .navbar-top .navbar-header {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    }    
+
+    .navbar-top .navbar-header {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    }
+    .nav-wrapper .nav.navbar-nav > li > a {
+        color: #ffffff;
+    }
+*/    </style>
+
+    <!--[if lt IE 9]>
+        <script src="${request.contextPath}/foysonis2016/vendor/ie9/html5shiv.js"></script>
+        <script src="${request.contextPath}/foysonis2016/vendor/ie9/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+
+
+<body>
+    <div class="aside">
+    <!-- START Main wrapper-->
+        <div class="wrapper">
+            <!-- START Top Navbar-->
+            <nav role="navigation" class="navbar navbar-default navbar-top navbar-fixed-top">
+                <!-- START navbar header-->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" id="navToggleBtn">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a href="https://wms.foysonis.com" class="navbar-brand">
+                        <div class="brand-logo"><!-- <i class="icon icon-logo"></i> -->
+                            <!--img.img-responsive(src="app/img/logo.png", alt="App Logo")-->
+                            <img src="../userGuide/images/Foysonis-White.png" alt="Foysonis" class="brandImg">
+                        </div>
+
+                        <!-- <div class="brand-logo-collapsed"><i class="icon icon-icon"></i>
+                        </div> -->
+                    </a>
+                </div>
+                <!-- END navbar header-->
+                <!-- START Nav wrapper-->
+                <div class="nav-wrapper">
+                    <!-- START Left navbar-->
+                    <!-- <ul class="nav navbar-nav">
+                        <li class="hidden-xs"> -->
+                            <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+                            <!-- <a href="#" data-toggle-state="aside-collapsed" class="hidden-xs" style="height: 60px;">
+                                <em><img src="/foysonis2016/app/img/menu_Header.svg" width="25px"></em>
+                            </a> -->
+                            <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+                            <!--     <em><img src="/foysonis2016/app/img/menu_Header.svg" width="25px"></em>
+                            </a>
+                        </li> -->
+                        <!-- START Page Title-->
+                        <!-- <li class="page-title hidden-xs"><i class="icon icon-admin"></i>
+
+                            <h1>${pageTitle}</h1>
+                        </li> -->
+                        <!-- END Page Title-->
+                        <!-- START User avatar toggle-->
+                        <!--li// Button used to collapse the left sidebar. Only visible on tablet and desktops
+        //a(href='#', data-toggle-state="aside-user")
+         // em.fa.fa-user-->
+                        <!-- END User avatar toggle-->
+                    <!-- </ul> -->
+                    <!-- END Left navbar-->
+                    <!-- START Right Navbar-->
+                    <!-- <ul class="nav navbar-nav navbar-right">
+                        <a href="#" class="header-contactUs">
+                            <span class="contactUsTxt">Contact Us&nbsp;&nbsp;</span>
+                            <img src="images/contact-us-ug.png" style="width: 31px;">
+                        </a>
+                    </ul> -->
+                    <!-- END Right Navbar-->
+                </div>
+                <!-- END Nav wrapper-->
+            </nav>
+            <aside class="aside bar-collapse" id="foyNav">
+                <!-- START Sidebar (left)-->
+                <nav class="sidebar">
+                    <ul class="nav main-nav">
+                        <!-- START Menu-->
+                        <li id="liDashBoard">
+                            <a href="#guideHome" title="Dashboard" data-toggle="" class="no-submenu" onmouseover="this.children[0].src='../userGuide/images/home-green.png';" onmouseout="this.children[0].src='../userGuide/images/Home-ico.png';">
+                                <!-- <em class="icon icon-dashboar"></em> -->
+                                <img src="../userGuide/images/Home-ico.png" class="imgDefault" style="width: 20px; padding-bottom: 6px;">
+                                <img src="../userGuide/images/home-green.png" class="hide" style="width: 20px; padding-bottom: 6px;"><span class="item-text">Home</span>
+                            </a>
+                        </li>
+                        <li id="liSetup">
+                            <a href="#setupAdmin" data-toggle="collapse" data-target="#ulSetup" class="no-submenu"
+                                    title="Receiving" onmouseover="this.children[0].src='../userGuide/images/setup-green.png';" onmouseout="this.children[0].src='../userGuide/images/setup-ad-ug.png';">
+                                <!-- <em class="icon icon-receiving"></em> -->
+                                <img src="../userGuide/images/setup-ad-ug.png" class="imgDefault" style="width: 20px; padding-bottom: 6px;">
+                                <img src="../userGuide/images/setup-green.png" class="hide" style="width: 20px; padding-bottom: 6px;"><span class="item-text">Setup / Administration</span>
+                            </a>
+
+                            <ul id="ulSetup" class="nav collapse">
+                                <li>
+                                    <a href="#AreaSetup" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Area Setup</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#AreaAttributes" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Area Attributes</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#AreaFields" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Area Fields & Description</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#ItemSetup"  data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Item Setup</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#DataImportBulk" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Item Data Import in Bulk</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#ItemAttributes" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Item Attributes</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+
+
+
+                        </li>
+
+                        <li id="liReceiving">
+                            <a href="#ReceivingPutaway" title="Shipping" data-toggle="collapse" data-target="#ulReceiving" class="has-submenu" onmouseover="this.children[0].src='../userGuide/images/Receiving-and-putaway-green.png';" onmouseout="this.children[0].src='../userGuide/images/receiving-and-putaway.png';">
+                                <!-- <em class="icon icon-shipping"></em> -->
+                                <img src="../userGuide/images/receiving-and-putaway.png" class="imgDefault" style="width: 18px; padding-bottom: 6px;">
+                                <img src="../userGuide/images/Receiving-and-putaway-green.png" class="hide" style="width: 18px; padding-bottom: 6px;"><span class="item-text">Receiving & Putaway</span>
+                            </a>
+
+                            <ul id="ulReceiving" class="nav collapse">
+                                <li>
+                                    <a href="#CreateReceipt" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Create Receipt</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#FindReceipt"  data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Find Receipt</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#PendingPutaway" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Pending Putaway</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#IdentifyProducts" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Indentify Product</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#PutawayProducts" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Putaway Products</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#CloseReceipt" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Close the receipts</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li id="liShipping">
+                            <a href="#ShippingOrders" title="Picking" data-toggle="collapse" data-target="#ulShipping" class="no-submenu" onmouseover="this.children[0].src='../userGuide/images/shipping-green.png';" onmouseout="this.children[0].src='../userGuide/images/shipping-ug.png';">
+                                <!-- <em class="icon icon-orders"></em> -->
+                                <img src="../userGuide/images/shipping-ug.png" class="imgDefault" style="width: 20px; padding-bottom: 6px;">
+                                <img src="../userGuide/images/shipping-green.png" class="hide" style="width: 20px; padding-bottom: 6px;"><span class="item-text">Shipping & Orders</span>
+                            </a>
+
+                            <ul id="ulShipping" class="nav collapse">
+                                <li>
+                                    <a href="#CreateOrder" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Create Order</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#PlanShipment" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Plan to Shipment</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#AllocateShipment" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Allocate Shipment</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#ViewPicks"  data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">View Picks</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#shippingDock" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Shipping Dock</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#activeShipments" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Active Shipments</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#LoadProducts" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Load products to trailer</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#packingSlip" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Print packing slip</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#bol" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Bill of Lading</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#ActiveTrucks" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Active Trucks Dispatch</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#ShippedInventory" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Shipped Inventory</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+
+
+                        </li>
+                        <li>
+                            <a href="#Picking" data-toggle="collapse" data-target="#ulPicking"
+                                    class="no-submenu" onmouseover="this.children[0].src='../userGuide/images/PICKING-green.png';" onmouseout="this.children[0].src='../userGuide/images/picking-ug.png';">
+                                <img src="../userGuide/images/picking-ug.png" class="imgDefault" style="width: 20px; padding-bottom: 6px;">
+                                <img src="../userGuide/images/PICKING-green.png" class="hide" style="width: 20px; padding-bottom: 6px;"><span class="item-text">Picking</span>
+                            </a>
+                            <ul id="ulPicking" class="nav collapse">
+                                <li>
+                                    <a href="#AllocationAndPick" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Allocation and Pick Status</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#ListPicking" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">List Picking</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#PalletPick" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Pallet Pick</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+
+                        <li>
+                            <a href="#Inventory" data-toggle="collapse" data-target="#ulInventory"
+                                    class="no-submenu" onmouseover="this.children[0].src='../userGuide/images/INVENTORY-green.png';" onmouseout="this.children[0].src='../userGuide/images/inventory.png';">
+                                <img src="../userGuide/images/inventory.png" class="imgDefault" style="width: 20px; padding-bottom: 6px;">
+                                <img src="../userGuide/images/INVENTORY-green.png" class="hide" style="width: 20px; padding-bottom: 6px;"><span class="item-text">Inventory</span>
+                            </a>
+                            <ul id="ulInventory" class="nav collapse">
+                                <li>
+                                    <a href="#ViewInventory" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">View Inventory</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#MoveInventory" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Move Inventory</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#AdjustmentFunc" data-toggle="" class="no-submenu">
+                                        <span class="item-text" style="font-size: 15px;">Adjustment Functionality</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+
+                        <!--+build-menu-items(secondMenu)-->
+                        <!-- START Theme color options -->
+                        <!-- END Theme color options-->
+                        <!-- END Menu-->
+                    </ul>
+
+                    <div data-toggle-state="aside-collapsed" class="">
+                    </div>
+                </nav>
+                <!-- END Sidebar (left)-->
+            </aside>
+            <!-- End aside-->
+            <!-- START aside-->
+            <!-- END aside-->
+            <!-- START Main section-->
+            <section class="main-section">
+
+                <!-- START Page content-->
+                <div class="content-wrapper" style="">
+
+                </div>
+                <!-- END Page content-->
+
+            </section>
+            <!-- END Main section-->
+        </div>
+</div>
+<div class="content-wrapper u-guid-main">
+    <div class="search-div">
+        &emsp;<img src="../userGuide/images/Search-icn.png" style="width: 35px; padding-bottom: 6px;">&emsp;<input id="findGuide" type="text" class="guide-search" placeholder="Search Foysonis Guide" />
+        <a id="prevBtnSearch" href="JavaScript:void(0);"><img src="../userGuide/images/icons-ScrollUp.png" class="nextPrevBtn" style="padding-bottom: 6px;"></a>
+        <a id="nextBtnSearch" href="JavaScript:void(0);"><img src="../userGuide/images/icons-ScrollUp.png" class="nextPrevBtn" style="transform: rotate(180deg); padding-top: 6px;"></a>
+        &emsp;<img src="../userGuide/images/cancel-srch.png" style="width: 25px; padding-bottom: 6px;" id="clearSearch">  
+    </div>
+    <div class="content-container">
+        
+    <div class="height-gap-50"></div>
+    <div id="guideHome" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="inner-title" style="text-align: center;">Foysonis WMS User Guide</div>
+            <div class="height-gap-50"></div>
+            <p>Foysonis and Foysonis WMS are trademarks of Foysonis LLC. All other trademarks are the
+            property of their respective owners and should be treated as such.<br/><br/>
+            Acknowledgement: This product includes software developed by the Apache Software
+            Foundation (c) 1999-2004 The Apache Software Foundation. All rights reserved.<br/><br/>
+            Foysonis LLC.<br/>
+            1000 Centregreen Way,<br/>
+            Cary NC 27513.</p> <br/>
+        </div>
+    </div> 
+
+    <div id="setupAdmin" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Setup / Administration</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Setting up a warehouse in Foysonis involves creating the areas, locations and then the items. Once
+            these base data are setup, users should verify the put away and allocation area configuration has
+            been setup right. After that you should be able to receive and ship products from Foysonis. Outside
+            of the Foysonis software, you need to make sure that you barcode your location, and able to use a
+            pre-printed LPN label to attach to pallets or cases when you receive to scan the barcode and track
+            it in Foysonis.</p><br/>
+        </div>
+    </div>
+    
+    <div id="AreaSetup" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Area setup</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Setting up a warehouse in Foysonis requires users to create locations and areas matching the
+            warehouse layout. By default, there is one default area created when a user signs up for the
+            Foysonis application. Every warehouse operations has their unique setup, but primarily a
+            warehouse will have two types of areas, one is a reserve storage area, where products will be
+            stored but won't be used for picking products. That will be done in a dedicated pick face area. If
+            pick face products are emptied out, then users would have to go to the reserve storage areas and
+            locations to replenish products to the pick face area. But if the warehouse is small, then all areas
+            and locations will be used as a pick face area.<br/><br/>
+            To add or change areas, from the left navigation, select "Administration &rarr; Locations & Areas" (This
+            is accessible only for Admin users).</p><br/>
+        </div>
+    </div>
+    
+    <div id="AreaAttributes" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Area Attributes</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>"Location and Areas" screen displayed below will let users add the type of storage area,
+            storage restriction, picking level restriction, and replenishment area when a user adds or
+            edits an area in your warehouse.</p><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/areaAttr.png" class="guideImg" /> 
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="AreaFields" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Area Fields and Description</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content" style="padding: 0;">
+            <!-- <div class="height-gap-20"></div> -->
+            <table id="areaFieldTbl">
+                <tr>
+                    <td class="tblCol1">Id</td>
+                    <td class="tblCol2">
+                        This is the area identifier to uniquely identify an
+                        area in a warehouse. No spaces or dashes allowed, just letters and numbers.
+                    </td>                    
+                </tr>
+                <tr>
+                    <td class="tblCol1">Name</td>
+                    <td class="tblCol2">
+                        This is the full description of the area in a warehouse.
+                    </td>                    
+                </tr>
+                <tr>
+                    <td class="tblCol1">Storage Area</td>
+                    <td class="tblCol2">
+                        Checking this flag will make an area a storage
+                        area where users can store products in a
+                        warehouse.<br/><br/>
+                        <span style="color: #2f5a93;">Inventory can be picked for fulfilment from this
+                        area</span><br/><br/>
+                        Checking this flag will make this area a pick
+                        face area where products will be picked for
+                        fulfilling orders.<br/><br/>
+                        <span style="color: #2f5a93;">Bin Area (These locations contain products that
+                        are counted in eaches)</span><br/><br/>
+                        Checking this flag would make this area to store
+                        products in eaches and any CaseId/PalletId lose
+                        their identifier when products are stored.
+                    </td>                     
+                </tr>
+ 
+                <tr>
+                    <td class="tblCol1">This area is a processing area (Picked inventory only)</td>
+                    <td class="tblCol2">
+                        Checking this flag can make an area be used for
+                        special processing area for performing any
+                        quality checks, wrapping a pallet, kitting or
+                        shipment staging area.<br/><br/>
+                        <span style="color: #2f5a93;">This is a shipment staging area</span><br/><br/>
+                        Checking this flag would make an area a
+                        shipment staging area.
+                    </td>                    
+                </tr>
+
+                <tr>
+                    <td class="tblCol1">This is an area for Temporary Holding (Pickup & Deposit) only</td>
+                    <td class="tblCol2">
+                        Storage attribute matched between an area
+                        and item ensures products are putaway to the
+                        right area. Storage attributes are user defined.
+                        For example, user can define a "Frozen" storage
+                        attribute that would then direct "Frozen" items
+                        to be stored in "Froze" area. This is a very
+                        simple putaway concept, but gives users
+                        unlimited powers to setup a warehouse
+                        putaway operation.
+                    </td>                    
+                </tr>
+  
+                <tr>
+                    <td class="tblCol1">Storage Restriction: Maximum Loads allowed per location in this area</td>
+                    <td class="tblCol2">
+                        Limit the number of loads that could be stored in a location.
+                    </td>                    
+                </tr>
+
+                <tr>
+                    <td class="tblCol1">Storage Restriction: Storage attribute dropdown</td>
+                    <td class="tblCol2">
+                        Limit the number of loads that could be stored in a location.
+                    </td>                      
+                </tr>
+  
+                <tr>
+                    <td class="tblCol1">Picking Level Restriction: The following are the levels in which inventory can be picked</td>
+                    <td class="tblCol2">
+                        Defines how users can pick a product from an
+                        area/location. Different picking levels are pallet, case and each.
+                    </td>                     
+                </tr>
+
+                <tr>
+                    <td class="tblCol1">Replenishment/Reserve Area: This area can
+                        be replenished from the below areas (in that order)</td>
+                    <td class="tblCol2">
+                        Defines a replenishment area to feed products
+                        to a pickface area.
+                    </td>                    
+                </tr>
+                                                                                                      
+            </table>
+        </div>
+    </div>
+    <div id="ItemSetup" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Item Setup</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Users can add items using the Items screen from the Admin menu. This will let users define
+            unique item id, description, uom and other attributes for an item.<br/><br/>
+            To access Items, from left navigation go to "Administration &rarr; Items".</p><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/itemSetup.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    <div id="DataImportBulk" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Item Data Import in Bulk</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>You can easily import a large list of items into Foysonis by entering the item data in a CSV file
+            template. <a href="/item/downloadItemCsvFile"> Here is the CSV template to use for item import. </a> Use can click on the "CSV Item Import"
+            button as shown below to upload the file to Foysonis.</p><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/itemDataImport.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>    
+
+    <div id="ItemAttributes" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Item Attributes</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content" style="padding: 0;">
+            <!-- <div class="height-gap-20"></div> -->
+            <table id="areaFieldTbl">
+                <tr>
+                    <td class="tblCol1">Item Id</td>
+                    <td class="tblCol2">
+                        This is a unique id for the item in the warehouse
+                    </td>                    
+                </tr>
+                <tr>
+                    <td class="tblCol1">Item Description</td>
+                    <td class="tblCol2">
+                        Full description for an item in the warehouse
+                    </td>                    
+                </tr>
+                <tr>
+                    <td class="tblCol1">Item Category</td>
+                    <td class="tblCol2">
+                        Groups items by category for reporting purpose
+                    </td>                     
+                </tr>
+ 
+                <tr>
+                    <td class="tblCol1">Lowest UOM</td>
+                    <td class="tblCol2">
+                        The lowest possible unit of measure for tracking the inventory of an item
+                    </td>                    
+                </tr>
+
+                <tr>
+                    <td class="tblCol1">Is Lot Tracked Status?</td>
+                    <td class="tblCol2">
+                        If you want to track the lotcode for an item you can turn this flag on
+                    </td>                    
+                </tr>
+  
+                <tr>
+                    <td class="tblCol1">Is Expired?</td>
+                    <td class="tblCol2">
+                        This will enable tracking expiration date for an item in the warehouse
+                    </td>                    
+                </tr>
+
+                <tr>
+                    <td class="tblCol1">Do you want to track case id?</td>
+                    <td class="tblCol2">
+                        This will let you track each individual case with an identifier in a pallet or if you just
+                        receive as a case you can track unique identifier for the case.
+                    </td>                      
+                </tr> 
+                <tr>
+                    <td class="tblCol1">Origin Code</td>
+                    <td class="tblCol2">
+                        The origin country code for the item
+                    </td>                      
+                </tr> 
+                <tr>
+                    <td class="tblCol1">Each Per Case</td>
+                    <td class="tblCol2">
+                        This is the number of eaches in a case
+                    </td>                      
+                </tr> 
+                <tr>
+                    <td class="tblCol1">Case Per Pallet</td>
+                    <td class="tblCol2">
+                        This is the number of cases in a pallet
+                    </td>                      
+                </tr> 
+                <tr>
+                    <td class="tblCol1">UPC Code</td>
+                    <td class="tblCol2">
+                        The UPC product code for an item
+                    </td>                      
+                </tr>
+                <tr>
+                    <td class="tblCol1">EAN Code</td>
+                    <td class="tblCol2">
+                        The EAN product code for an item
+                    </td>                      
+                </tr>
+                <tr>
+                    <td class="tblCol1">Storage Attribute</td>
+                    <td class="tblCol2">
+                        Storage attribute determines in which area
+                        the item would be stored in the
+                        warehouse. Foysonis looks at the Storage
+                        attribute for an Area and Item, and if it
+                        matches will then store products in that
+                        area. Storage attributes are user defined.
+                        For example, user can define "Frozen" as a
+                        storage attribute for an area, and then
+                        assign that to an item. After that system
+                        would store all "Frozen" items in the
+                        "Frozen" area.
+                    </td>                      
+                </tr>
+                <tr>
+                    <td class="tblCol1">Re-order level Qty (In Lowest UOM)</td>
+                    <td class="tblCol2">
+                        System will use this value to generate a
+                        report that shows which items in the
+                        warehouse needs products to be
+                        reordered.
+                    </td>                      
+                </tr>                                                                                                  
+            </table>
+        </div>
+    </div>
+    <div id="ReceivingPutaway" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Receiving & Putaway</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Receiving is the process by which inventory is brought into a warehouse and put away into
+            storage locations. Users need to create a receipt with the information about the items
+            going to be received into the warehouse. Once the receipt information is entered, the
+            system will let users create the inventory and then store it in a system suggested location
+            or a location selected by the user. Each receipt will have receipt lines detailing the item,
+            expected quantity and UOM. As items are identified and received, the system will update
+            the received quantity in the receipt line.</p>
+            <div class="height-gap-20"></div>
+            <p>The shipping process involves the following steps</p>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;STEP 01&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Create receipt with information about items going to be received&emsp;</span></div><br/>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;STEP 02&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Identify products and give a pallet id or case id for the inventory&emsp;</span></div><br/>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;STEP 03&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Putaway the pallets or cases to storage location&emsp;</span></div><br/>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;STEP 04&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Close the receipt&emsp;</span></div><br/>
+            <div class="height-gap-20"></div>
+            <p>To access Receiving, click "Receiving" from left navigation.</p>
+        </div>
+    </div> 
+
+    <div id="CreateReceipt" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Create Receipt</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Users can create a new receipt by clicking on the "New Receipt" button shown below. It will open up a sliding new receipt form to enter the receipt information.</p><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/createReceipt.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div> 
+
+    <div id="FindReceipt" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Find Receipt</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>You can search for the receipt by entering the receipt number, receipt status, and date range.</p><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/findReceipt.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>     
+
+    <div id="PendingPutaway" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Pending Putaway</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>If products are identified, but have not been put away, you can click on the "Pending
+                Putaway" button to look at those pallets and cases.</p><br/>
+
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/pendingPutaway.png" class="guideImg" /> 
+            </div>    
+            <p>This is how the pop-up looks like. Users can click on the "Putaway" button for each
+            pallet/case and then select a storage location to putaway.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/pendingPutaway2.png" class="guideImg" /> 
+            </div>
+
+        </div>
+    </div>     
+
+    <div id="IdentifyProducts" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Identify products</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Users will identify and create inventory at pallet or case level by clicking on the
+                "Receive/Putaway" button on each receipt line.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/identifyProd.png" class="guideImg" /> 
+            </div>
+            <p>Users would then enter the Pallet Id and the quantity to create inventory at pallet level in
+            the warehouse. If the item is case tracked, then the users would enter the Case Id to
+            identify the inventory in the warehouse.</p>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/identifyProd2.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    <div id="PutawayProducts" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Putaway products</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Once the pallet or case is created, the user would then click on the "Putaway" button to
+            find the storage location suggested by Foysonis. Users would then take the product to that
+            location and scan it to confirm the deposit. The user could override the system suggested
+            location and scan their own location selection if they choose to.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/putawayProd.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div> 
+
+    <div id="CloseReceipt" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Close the receipt</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>If the user has received all the products related to the receipt, the user would then close
+            the receipt. Users will select the actions button and then select the 'close' menu option to
+            close the receipt.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/closeReceipt.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>       
+
+    <div id="ShippingOrders" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Shipping & Orders</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Users will create orders and then plan it into shipments for allocating inventory in the
+            warehouse. Once the allocation is done, warehouse workers could complete the picking
+            process to move products from storage location to a shipment staging location. If the
+            product is being shipped on a truck, then it will be loaded to the truck and dispatched. For
+            parcel shipping, the products will be taken to the parcel staging area, shipping labels will
+            be printed and then sent using a parcel carrier.<br/><br/>
+            The shipping process contains several steps that include processing a shipment until the
+            inventory is loaded to a truck or trailer and the truck is dispatched.</p><br/><br/>
+            <p>These steps include:</p>
+            <div class="height-gap-20"></div>
+            <p>The shipping process involves the following steps</p>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;STEP 01&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Planning orders to shipments&emsp;</span></div><br/>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;STEP 02&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Allocating and creating pick work&emsp;</span></div><br/>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;STEP 03&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Bringing the picked inventory to the assigned staging lane after it is picked&emsp;</span></div><br/>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;STEP 04&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Loading each piece of inventory for the shipment(s) to the truck/trailer.&emsp;</span></div><br/>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;STEP 05&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Printing the pack-slip or BOL.&emsp;</span></div><br/>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;STEP 06&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Dispatch the trailer&emsp;</span></div><br/>
+            <div class="height-gap-20"></div>            
+        </div>
+    </div> 
+
+    <div id="CreateOrder" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Create Order</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Users create orders by clicking on the "New Order" button and then entering the order
+            number, shipped to customer, the item information and the requested quantity in order
+            lines etc.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/createOrder.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    <div id="PlanShipment" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Plan to Shipment</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Once the order is created, it needs to be planned into a shipment. Users will select the
+            order lines and then click on the "Plan to Shipment" button to plan it to a shipment. It can
+            be planned to a new shipment or be assigned to an existing shipment. If multiple orders
+            go to the same customer, all of them can be easily planned into one shipment and shipped
+            from the warehouse.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/planToShipment.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>    
+
+    <div id="AllocateShipment" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Allocate Shipment</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Users will click on the "Allocate" button to create pick work to pick products in the
+            warehouse to satisfy the request for inventory in the shipment. If the allocation is
+            successful, the user can click on the "View Picks" button to look at the pick work created. If
+            there are any errors in allocation, users will be shown the reason for the error.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/allocateShipment.png" class="guideImg" /> 
+            </div>
+            <p>User selects staging location Once the user clicks on the "Allocate" button, a pop-up shows up like below and the user has to select a shipment staging location.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/allocateShipment2.png" class="guideImg" /> 
+            </div>
+
+        </div>
+    </div> 
+
+    <div id="ViewPicks" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">View Picks</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Once the allocation is successful, the user can easily click on the "View Picks" button to
+            look at the generated picks.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/viewPicks.png" class="guideImg" /> 
+            </div>
+            <p>Clicking on the "View Picks" button will display the pick information as shown below.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/viewPickList.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div> 
+
+    <div id="allocationOnDates" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Inventory allocation based on dates</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>When finding inventory, if the item is date controlled, a FEFO (First Expire, First Out)
+            inventory must be selected. If the item is non-date controlled, then a FIFO (First In, First
+            Out) inventory must be used. This will make sure that the warehouse is clearing the
+            inventory in proper industry standards.</p>
+        </div>
+    </div>
+
+    <div id="shippingDock" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Shipping Dock</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Once products are picked and shipments have been moved to a staged status, users can
+            load the picked inventory to the truck, print paperwork and then complete the shipment
+            process using the "Shipping Dock" screen as displayed below.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/shippingDock.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    <div id="activeShipments" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Active Shipments</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>The Active Shipments tab displays the active shipments by default. Active shipments
+            means, any shipments currently in process in the warehouse. When displaying the details
+            of the shipments, the system will display inventory that are picked for the shipment.
+            Users can easily modify shipment quantity of a shipment line in case the shipping dock
+            wants to short-ship the line.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/activeShipments.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    <div id="LoadProducts" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Load products to trailer</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>LTL/TL shipment must be first loaded before the shipment can be completed. Users will
+            click on the "Load" action option to load inventory to the truck.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/loadProdToTrailer.png" class="guideImg" /> 
+            </div>
+            <p>When the load button is selected, the user should be prompted to enter the trailer/truck
+            number in a small pop-up. Once the inventory is loaded to the truck, the shipment goes to
+            "Completed" status.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/loadProd2.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    <div id="packingSlip" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Print packing slip</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Packing slips are printed per shipment basis. It contains information about what products
+            are being shipped, the quantity of those products and the shipping address information of
+            the customer.</p><br/><br/>
+        </div>
+    </div>    
+
+    <div id="bol" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Bill of Lading</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>The Bill of Lading document is a standard document for LTL/TL shipments. This document
+            should be generated for each truck before it departs from a warehouse loaded with
+            shipments. The users should be able to print the Bill of Lading documents after or at the
+            time of closing the trailer.</p><br/><br/>
+        </div>
+    </div> 
+
+    <div id="ActiveTrucks" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Active Trucks Dispatch</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Active trucks are any trucks that are not dispatched, but have active shipments. Once the
+            shipment is in completed status, all the products are loaded to the truck, the user can print
+            the paperwork and then close and dispatch the truck.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/activeTruckDispatch.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div> 
+
+    <div id="ShippedInventory" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Shipped Inventory</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Users can search for shipped inventory from this screen based on item, shipment id, order number etc.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/shippedInventory.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    <div id="Picking" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Picking</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>There are two main types of picking in Foysonis.</p>
+            <div class="height-gap-20"></div>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;01&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;Pallet picking: Users pick products by pallet&emsp;</span></div><br/>
+            <div style="display: inline-flex; padding-bottom: 5px;"><span class="stepArrow">&nbsp;02&emsp;</span><div class="arrowRight"></div><span class="stepArrowInfo">&emsp;List Picking: User pick products by cases or eaches&emsp;</span></div><br/>           
+        </div>
+    </div>
+
+    <div id="AllocationAndPick" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Allocation and Pick Status</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>System will display the status of picks for each shipment. For each shipment user can look
+            at the pallet picks, replenishment, list picks and shipment details.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/allocationPickStatus.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    <div id="ListPicking" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">List Picking</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Users can select the pick list to start the work by clicking on the "Start" button as shown
+            below. List picks contain each and case picks.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/listPicking.png" class="guideImg" /> 
+            </div>
+            <p>Once you decide to pick to a pallet, then you confirm the picking operation in the screen
+            as shown below where you will confirm the pick from Pallet/Case Id and the pick quantity.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/listPickPopUp.png" class="guideImg" /> 
+            </div>
+            <p>Once all the picks in the list has been confirmed, then the system will direct the user to
+            deposit the products to the shipment staging location.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/depositPick.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    <div id="PalletPick" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Pallet Pick</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Pallet picks let users pick products in pallets and move to shipment stating location. Users
+            start the pallet picking process by clicking the "Confirm" button.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/palletPick.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>  
+
+    <div id="Inventory" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Inventory</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Inventory information is maintained accurately in Foysonis to perform fulfillment activities
+            in a reliable and quick manner. Users can easily search for the inventory data based on
+            various inventory attributes and also adjust the inventory data in the warehouse if there is
+            a need for it.</p>
+        </div>
+    </div>       
+
+    <div id="ViewInventory" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">View Inventory</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>The Foysonis View Inventory screen will let users view inventory in the warehouse. Users
+            can search for inventory by item, Pallet or Case Id, location, area and additional inventory
+            related fields.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/viewInventory.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    <div id="MoveInventory" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Move Inventory</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Users will be able to move a pallet from one location to another, but the system will
+            prevent/warn users if they try to move an inventory from a shipping staging or processing
+            location other than its intended destination location. Users can move a case from one
+            pallet to another, or from location A to location B. Users can move an each from location A
+            to location B.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/moveInventory.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>    
+
+    <div id="AdjustmentFunc" class="guide-content">
+        <div class="height-gap-50"></div>
+        <div class="inner-title">Adjustment Functionality</div>
+        <div class="height-gap-20"></div>
+        <div class="inner-content">
+            <div class="height-gap-20"></div>
+            <p>Users can add, modify and delete attributes of inventory in a location using the Inventory Adjustment screen.</p><br/><br/>
+            <div class="guideImgContainer">
+               <img src="../userGuide/images/guideImgs/invAdjust.png" class="guideImg" /> 
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+</div>
+<!-- END Main wrapper-->
+<!-- START Scripts-->
+<!-- Main vendor Scripts-->
+<script src="../userGuide/js/jquery.min.js"></script>
+<script src="../userGuide/js/bootstrap.min.js"></script>
+<script src="../userGuide/js/jquery.mark.min.js"></script>
+<script src="../userGuide/js/app.js"></script>
+<script src="../userGuide/js/userGuideApp.js"></script>
+<!-- END Scripts-->
+</body>
+
+</html>

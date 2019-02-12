@@ -1,0 +1,53 @@
+//- Extends the admin layout
+extends layout/main-layout
+
+block active-item
+  //- Activate here the item
+  - firstMenu['Administration']['active'] = 1
+  - firstMenu['Administration']['S']['Animations']['active'] = 1 
+
+block content
+
+  div.panel.panel-new
+   ul.nav.nav-tabs(role="tablist")
+    li.active(role="presentation")
+     a(href="#home" aria-controls="home" role="tab" data-toggle="tab") Home
+    li(role="presentation")
+     a(href="#profile" aria-controls="profile" role="tab" data-toggle="tab") Profile
+    li(role="presentation")
+     a(href="#messages" aria-controls="messages" role="tab" data-toggle="tab") Messages
+    li(role="presentation")
+     a(href="#settings" aria-controls="settings" role="tab" data-toggle="tab") Settings
+
+
+
+   div.tab-content 
+    #home.tab-pane.active(role="settings")
+
+     form.table-form.form-inline.clearfix(role="form")
+      div.col-md-11
+       div.form-group.col-md-4
+        div
+         label(for="input-item") Items 
+        div
+         input.form-control.input-lg(id="input-item" type="text" placeholder="") 
+       div.form-group.col-md-4
+        div
+         label(for="input-lpn") LPN
+        div
+         input.form-control.input-lg(id="input-lpn" type="text" placeholder="Pallet or Case ID")
+       div.form-group.col-md-4
+        div
+         label(for="input-location") Location
+        div 
+         input.form-control.input-lg(id="input-location" type="text" placeholder="Location ID or Bardcode")
+      div.col-md-1
+       .row a
+       button.btn.btn-primary.btn-lg.col-md-12(type="submit") Search
+
+     div(ng-controller="mainCtrl") 
+      div(ui-grid="gridOptions" ui-grid-selection ui-grid-exporter ui-grid-pagination).myGrid
+    #profile.tab-pane(role="settings") profile
+    #messages.tab-pane(role="settings") messages 
+    #settings.tab-pane(role="settings") settings
+   

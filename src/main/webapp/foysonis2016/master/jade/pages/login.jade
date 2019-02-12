@@ -1,0 +1,31 @@
+//- Extends the page layout
+extends ../layout/page-layout
+
+block content
+
+  .row.row-table.page-wrapper.login-page 
+    .panel-wrapper.col-lg-4.col-md-6.col-sm-8.col-xs-12.align-middle
+      div.logo-wrapper
+        a(href="/")
+          i.icon.icon-logo
+      p.sign-in.text-center.out-of-panel Sign In
+      // START panel
+      .panel.panel-dark.panel-flat(data-toggle="play-animation",data-play="fadeIn",data-offset="0")
+        .panel-body
+          form(role='form').mb-lg
+            .text-left.mb-sm
+              label Company ID
+            .form-group.has-feedback
+              input#inputCompany.form-control.input-lg(type='text')
+            .text-left.mb-sm
+              label Username
+            .form-group.has-feedback
+              input#inputUsername.form-control.input-lg(type='text')
+            .text-left.mb-sm
+              label Password
+            .form-group.has-feedback
+              input#inputPassword.form-control.input-lg(type='password')
+            button.btn.btn-block.btn-primary.input-lg(type='submit') Login
+            a.text-muted.text-center(href="#") Forgot your password?     
+      // END panel
+      a.text-center.out-of-panel(href="#") Need to Signup? 

@@ -1,0 +1,65 @@
+
+// START Sidebar (left)
+nav.sidebar
+
+  // START user info
+  .item.user-block
+    // User picture
+    .user-block-picture
+      .user-block-status
+        img.img-thumbnail.img-circle(src='app/img/user/02.jpg', alt="Avatar", width="60", height="60")
+        .circle.circle-success.circle-lg
+      // Status when collapsed
+    // Name and Role
+    .user-block-info
+      span.user-block-name.item-text Welcome User
+      span.user-block-role UX-Dev
+  // END user info
+
+  ul.nav
+    
+    // START Menu
+    +build-menu-items(firstMenu)
+    //+build-menu-items(secondMenu)
+    
+    // START Theme color options 
+    //-Wli
+      a.has-submenu.menu-item(href="#", title="Color options", data-toggle="collapse-next")
+        .label.label-purple.pull-right 4
+        em.fa.fa-tint
+        span.item-text Colors
+      // START SubMenu item
+      ul.nav.collapse
+        li
+          a.no-submenu(href="#", title="Option 1", data-toggle="load-css", data-uri="app/css/beadmin-theme-a.css")
+            span.item-text Alternative 1
+        li
+          a.no-submenu(href="#", title="Option 2", data-toggle="load-css", data-uri="app/css/beadmin-theme-b.css")
+            span.item-text Alternative 2
+        li
+          a.no-submenu(href="#", title="Option 3", data-toggle="load-css", data-uri="app/css/beadmin-theme-c.css")
+            span.item-text Alternative 3
+        li
+          a.no-submenu(href="#", title="Option 4", data-toggle="load-css", data-uri="app/css/beadmin-theme-d.css")
+            span.item-text Alternative 4
+      // END SubMenu item
+    // END Theme color options
+
+    //-li
+      ul.nav-labels
+        li.nav-heading Categories
+        li.nav-labels-item
+          span.circle.circle-lg.circle-success
+          a(href="#") Green
+        li.nav-labels-item
+          span.circle.circle-lg.circle-danger
+          a(href="#") Red
+        li.nav-labels-item
+          span.circle.circle-lg.circle-info
+          a(href="#") Skyblue
+        li.nav-labels-item
+          span.circle.circle-lg.circle-warning
+          a(href="#") Yellow
+    // END Menu
+
+// END Sidebar (left)

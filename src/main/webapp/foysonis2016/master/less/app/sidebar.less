@@ -1,0 +1,260 @@
+/* ========================================================================
+   Component: sidebar.less
+ ========================================================================== */
+ 
+@sidebar-bg:                      #315d90;
+@sidebar-border-color:            greyscale(darken(@sidebar-bg, 20%));
+
+@sidebar-item-color:              #FFF;
+@sidebar-item-color-active:       #FFF;
+@sidebar-item-bg-active:          #23a39c;
+
+@sidebar-icon-color:              inherit;
+@sidebar-icon-color-active:       @sidebar-item-color-active;
+
+@sidebar-bullet-color:            @sidebar-item-color-active;
+@sidebar-bullet-color-active:     @sidebar-icon-color-active;
+
+
+@sidebar-heading-color:           #FFF;
+@sidebar-label-color:             #FFF;
+
+@submenu-header-hg:               40px;   // Submenu header when hover collapse sidebar
+
+.sidebar {
+  background-color: @sidebar-bg; 
+  height: 100%;
+  overflow-y: auto;
+  //border-right: 1px solid @sidebar-border-color;
+      *{
+        &:active,&:focus,&:hover{text-decoration: none !important;} 
+      }
+
+  // First main level
+  > .nav {
+    position: relative;
+    
+    // Only the first item in sidebar
+    > .nav-heading:first-child {
+      padding-top: 20px;
+    }
+
+    .item-text{padding-left:12px;}
+
+    .collapse,.collapsing{ 
+        background:#34567f !important;
+        border-left:7px solid #23a39c;
+        li{
+          &:hover,&:focus,a,span{background: none !important;}
+          &:hover{opacity:0.67;}
+        }
+    }
+  }
+
+  .nav-heading {
+    padding: 12px 30px;
+    color: @sidebar-heading-color;
+    font-size: 13px;
+    letter-spacing: .035em;
+    text-indent: -10px;
+    pointer-events: none;
+  }
+  
+  .nav-labels {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+    > .nav-labels-item {
+      padding: 5px 25px;
+      font-size: 13px;
+      > a {
+        color: @sidebar-label-color;
+      }
+      .circle {
+        margin-right: 20px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  // Items
+  .nav {
+
+    > li {
+
+      > a,
+      > .nav-item {
+        padding: 14px 25px;
+        color: @sidebar-item-color;
+        letter-spacing: .025em;
+        font-weight: 500;
+        font-size:16px;
+        .transition(background-color 0.3s ease);
+        &:focus {
+          text-decoration: underline !important;
+          color: @sidebar-item-color-active;
+        }
+        // Item icon
+        > em {
+          width: 2em;
+          color: @sidebar-icon-color;
+          vertical-align: middle;
+        }
+      }
+
+      // Active item state
+      &.active,
+      &:hover {
+        > a{
+          background-color: @sidebar-item-bg-active;
+          color: @sidebar-item-color-active;
+        }
+        > a > em {
+          color: @sidebar-icon-color-active;
+        }
+      }
+
+      &.active{
+        border-left-color: @brand-primary;
+      }
+
+
+    }
+
+
+    // Sub Levels
+    .nav {
+      padding-left: 20px;
+      background-color: @sidebar-bg;
+      > li  {
+        border-left: 0;
+        > a,
+        > .nav-item {
+          display: block;
+          position: relative;
+          line-height:1.8;
+          padding: 10px 30px 10px 6px;
+          background-color: transparent !important;
+          font-weight: normal;
+          &:focus, &:hover {
+            color: @sidebar-item-color-active;
+          }
+        }
+
+
+        &.active {
+          > a,
+          > .nav-item {
+            color: @sidebar-icon-color-active;
+            &:after {
+              border-color: @sidebar-bullet-color-active;
+              background-color: @sidebar-bullet-color-active;
+            }
+          }
+        }
+      } // li
+    } // .nav
+
+  }
+}
+
+// Toggled state styles
+// ---------------------------------
+
+
+  .aside-collapsed {
+
+    .sidebar {
+      overflow: visible !important;
+      // Applies to first level items
+      > .nav {
+        
+        > .nav-heading {
+          display: none !important;
+        }
+
+        // increase icons size
+        > li > a > em {
+          //font-size: 1.2em;
+          width: auto;
+        }
+
+        > li > a,
+        > li > .nav-item {
+          //padding: 20px 0;
+          text-align: center;
+          // Remove first level main text
+         .item-text {
+            display: none;
+            position: absolute;
+            left: 100%; top: 0;
+            margin-left: 1px;
+            margin-top: 1px;
+            padding-left: 20px;
+            font-weight: bold;
+            line-height: @submenu-header-hg;
+            white-space: nowrap;
+            z-index: 2002;
+          }
+          &.no-submenu .item-text {
+            display: none !important;
+          }
+        }
+        // accessibility
+        > li > a:focus {
+          background-color: transparent;
+          > em { 
+            color: inherit;
+          }
+        }
+      }
+      // hide labels when sidebar is collapsed
+      .nav-labels {
+        display: none;
+      }
+
+      // Applies to all level items
+      .nav {
+        // relocate the menu to appear 
+        // next to the sidebar
+        .nav {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          //margin-left: 1px;
+          padding-left: 20px;
+          padding-top: @submenu-header-hg;
+          min-width: 220px;
+          z-index: 2001;
+          height: auto !important; // override collapse
+          box-shadow: 0 0 0 #000;
+          border: 1px solid rgba(0,0,0,0.15);
+        }
+
+        
+        // show submenu on hover/click
+        > li:hover,
+        > li.open {
+          .nav {
+            display: block;
+          }
+          .item-text {
+            display: block;
+          }
+        }
+      }
+
+      // labels in menu items
+      .nav {
+        .label {
+          position: absolute;
+          top:10px; right: 5px;
+        }
+      }
+
+    } // .sidebar
+
+  } // .aside-collapsed
+
+

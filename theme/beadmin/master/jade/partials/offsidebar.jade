@@ -1,0 +1,125 @@
+// START Off Sidebar (right)
+nav
+  .p-lg.text-center
+    em.fa.fa-user
+    strong Connections
+  ul.nav
+    // END user info
+    li.p
+      .form-group.has-feedback
+        input.form-control.input-sm(type='text', placeholder="Search contacts..")
+        em.fa.fa-search.form-control-feedback.text-muted
+
+    // START list title
+    li.p
+      small.text-muted ONLINE
+    // END list title
+    li
+      // START User status
+      a(href="#").media.p.mt0
+        span.pull-right
+          span.circle.circle-success.circle-lg
+        span.pull-left
+          // Contact avatar
+          img.media-object.img-circle.thumb32(src='app/img/user/05.jpg', alt="Image")
+        // Contact info
+        span.media-body
+          span.media-heading
+            strong Laura Sam
+            br
+            small.text-muted Lead, Developer
+      // END User status
+      // START User status
+      a(href="#").media.p.mt0
+        span.pull-right
+          span.circle.circle-success.circle-lg
+        span.pull-left
+          // Contact avatar
+          img.media-object.img-circle.thumb32(src='app/img/user/06.jpg', alt="Image")
+        // Contact info
+        span.media-body
+          span.media-heading
+            strong Beverley Pierce
+            br
+            small.text-muted Writer
+      // END User status
+      // START User status
+      a(href="#").media.p.mt0
+        span.pull-right
+          span.circle.circle-danger.circle-lg
+        span.pull-left
+          // Contact avatar
+          img.media-object.img-circle.thumb32(src='app/img/user/07.jpg', alt="Image")
+        // Contact info
+        span.media-body
+          span.media-heading
+            strong Mika Long
+            br
+            small.text-muted System Analyst
+      // END User status
+      // START User status
+      a(href="#").media.p.mt0
+        span.pull-right
+          span.circle.circle-warning.circle-lg
+        span.pull-left
+          // Contact avatar
+          img.media-object.img-circle.thumb32(src='app/img/user/08.jpg', alt="Image")
+        // Contact info
+        span.media-body
+          span.media-heading
+            strong Danielle Berry
+            br
+            small.text-muted Developer
+      // END User status
+
+    // START list title
+    li.p
+      small.text-muted OFFLINE
+    // END list title
+    li
+      // START User status
+      a(href="#").media.p.mt0
+        span.pull-right
+          span.circle.circle-lg
+        span.pull-left
+          // Contact avatar
+          img.media-object.img-circle.thumb32(src='app/img/user/09.jpg', alt="Image")
+        // Contact info
+        span.media-body
+          span.media-heading
+            strong Martin Cooper
+            br
+            small.text-muted Designeer
+      // END User status
+      // START User status
+      a(href="#").media.p.mt0
+        span.pull-right
+          span.circle.circle-lg
+        span.pull-left
+          // Contact avatar
+          img.media-object.img-circle.thumb32(src='app/img/user/10.jpg', alt="Image")
+        // Contact info
+        span.media-body
+          span.media-heading
+            strong Daniel Curtis
+            br
+            small.text-muted Designer
+      // END User status
+    li
+      .p-lg.text-center
+        // Optional link to list more users
+        a.btn.btn-purple.btn-sm(href="#", title="See more contacts")
+          strong Load more..
+  // Extra items
+  .p
+    p: small.text-muted Tasks completion
+    .progress.progress-xs.m0
+      .progress-bar.progress-bar-success.progress-80(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
+        span.sr-only 80% Complete
+  .p
+    p: small.text-muted Upload quota
+    .progress.progress-xs.m0
+      .progress-bar.progress-bar-warning.progress-40(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100')
+        span.sr-only 40% Complete
+
+// END Off Sidebar (right)

@@ -1,0 +1,50 @@
+//- Extends the admin layout
+extends layout/main-layout
+
+block active-item
+  //- Activate here the item
+  - firstMenu['Administration']['active'] = 1
+  - firstMenu['Administration']['S']['Animations']['active'] = 1 
+
+block content
+
+  div.col-md-4
+   div.panel.panel-new.panel-side
+    div.location-area
+     div.btn-wrapper.clearfix 
+      button.btn.btn-primary.btn-lg.col-xs-12 Add New Area
+     ul.area-list 
+      li.active
+       p.bigger.text-uppercase DEFAULT
+       p 23 Alder Street Area, New York 
+      li
+       p.bigger.text-uppercase DEFAULT
+       p 23 Alder Street Area, New York
+      li
+       p.bigger.text-uppercase DEFAULT
+       p 23 Alder Street Area, New York
+      li
+       p.bigger.text-uppercase DEFAULT
+       p 23 Alder Street Area, New York
+      li
+       p.bigger.text-uppercase DEFAULT
+       p 23 Alder Street Area, New York
+
+
+  div.col-md-8
+   div.panel.panel-new
+    ul.nav.nav-tabs(role="tablist")
+     li.active(role="presentation")
+      a(href="#locations" aria-controls="locations" role="tab" data-toggle="tab") Locations
+     li(role="presentation") 
+      a(href="#area" aria-controls="area" role="tab" data-toggle="tab") Area
+     li.btn-wrapper.pull-right
+      button.btn.btn-primary.btn-lg.col-xs-12 Add New Area
+
+    div.tab-content(role="settings")
+     #locations.tab-pane.active(role="settings")
+      div(ng-controller="mainCtrl")
+       div(ui-grid="gridOptions" ui-grid-selection ui-grid-exporter ui-grid-pagination).myGrid
+     #area.tab-pane(role="settings") Area
+
+

@@ -1,0 +1,53 @@
+//- Extends the admin layout
+extends layout/main-layout
+
+block active-item
+  //- Activate here the item
+  - firstMenu['Administration']['active'] = 1
+  - firstMenu['Administration']['S']['Animations']['active'] = 1 
+
+block content
+ 
+    div
+     form.table-form.form-inline.clearfix(role="form")
+      div.col-md-11.padding-off 
+       div.form-group.col-md-4.padding-off  
+        div
+         label(for="input-item") Form Title 
+        div
+         input.form-control.input-lg(id="input-item" type="text" placeholder="Placeholder text")
+    p
+    div
+      p
+        button.btn.btn-primary.btn-xl Button 
+        button.btn.btn-success.btn-xl Button:hover
+    p
+    div
+      div.col-md-4.clearfix.padding-off 
+        p.bg-danger Alert Bar: Status this is a error message alert.
+        p.bg-success Success Message: This was successful.
+        p.bg-info Notification Message: This is notification.
+    div.col-md-12
+      ul.inline-list.guide-list 
+        li
+          div.bg-primary
+          div.bg-primary-darker
+        li
+          div.bg-success
+          div.bg-success-darker
+        li
+          div.bg-danger
+          div.bg-danger-darker
+        li
+          div.bg-grey
+          div.bg-grey-darker
+        li
+          div.bg-white
+          div.bg-white-darker
+    div.col-md-12
+      div.icon-wrapper
+        i.icon.icon-more.hover(data-toggle="tooltip" data-placement="bottom" title="Stationary lift off of the case study section of the warehouse you will find a blue strip of paint, this is the pallette log")
+
+
+
+
