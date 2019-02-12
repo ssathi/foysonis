@@ -77,48 +77,6 @@ hibernate:
         use_second_level_cache: true
         use_query_cache: false
         region.factory_class: 'org.hibernate.cache.ehcache.EhCacheRegionFactory' 
-        
-dataSource:
-    pooled: true
-    jmxExport: true
-    driverClassName: com.mysql.jdbc.Driver
-    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-    username: root
-    password: 123456
-#    password: Foison2016
-
-environments:
-    development:
-        dataSource:
-            dbCreate: update
-            url: jdbc:mysql://localhost/foysonis_prodtest?zeroDateTimeBehavior=convertToNull
-    test:
-        dataSource:
-            dbCreate: update
-            url: jdbc:mysql://localhost:3306/foysonis_test?autoReconnect=true&useSSL=false
-    production:
-        dataSource:
-            dbCreate: update
-            url: jdbc:mysql://173.194.249.54/foysonis_dev
-#            url: jdbc:mysql://foysonisaurorainstance-cluster.cluster-ci8luflnlnok.us-west-2.rds.amazonaws.com/foysonis
-            properties:
-                jmxEnabled: true
-                initialSize: 5
-                maxActive: 50
-                minIdle: 5
-                maxIdle: 25
-                maxWait: 10000
-                maxAge: 600000
-                timeBetweenEvictionRunsMillis: 5000
-                minEvictableIdleTimeMillis: 60000
-                validationQuery: SELECT 1
-                validationQueryTimeout: 3
-                validationInterval: 15000
-                testOnBorrow: true
-                testWhileIdle: true
-                testOnReturn: false
-                jdbcInterceptors: ConnectionState
-                defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
 
 ---
 company:
